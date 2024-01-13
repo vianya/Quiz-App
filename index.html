@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div id="questions-container">
+      <div class="question" id="question1">
+        <p>1. What is the full form of SQL?</p>
+        <input type="radio" name="question1">Structured Query List<br>
+        <input type="radio" name="question1">Sample Query Language<br>
+        <input type="radio" name="question1" id="correct1">Structured Query Language<br>
+        <input type="radio" name="question1">None of these<br>
+        <button class="next" onclick="next(1)">Next</button>
+      </div>
+
+      <div class="question" id="question2">
+        <p>2. Which of the following is not a valid SQL type?</p>
+        <input type="radio" name="question2">FLOAT<br>
+        <input type="radio" name="question2">NUMERIC<br>
+        <input type="radio" name="question2" id="correct2">DECIMAL<br>
+        <input type="radio" name="question2">CHARACTER<br>
+        <button class="next" onclick="next(2)">Next</button>
+      </div>
+
+      <div class="question" id="question3">
+        <p>3. SQL Views are also known</p>
+        <input type="radio" name="question3">Simple tables<br>
+        <input type="radio" name="question3" id="correct3">Virtual tables<br>
+        <input type="radio" name="question3">Complex tables<br>
+        <input type="radio" name="question3">Actual tables<br>
+        <button class="next" onclick="next(3)">Next</button>
+      </div>
+
+      <div class="question" id="question4">
+        <p>4. How many Primary Keys can have in a table?</p>
+        <input type="radio" name="question4" id="correct4">Only 1<br>
+        <input type="radio" name="question4">Only 2<br>
+        <input type="radio" name="question4">Depends on the number of columns<br>
+        <input type="radio" name="question4">Depends on DBA<br>
+        <button class="next" onclick="next(4)">Next</button>
+      </div>
+
+      <div class="question" id="question5">
+        <p>5. Which datatype can store unstructured data in a column?</p>
+        <input type="radio" name="question5">CHAR<br>
+        <input type="radio" name="question5" id="correct5">RAW<br>
+        <input type="radio" name="question5">NUMERIC<br>
+        <input type="radio" name="question5">VARCHAR<br>
+        <button onclick="submitQuiz()">Submit Quiz</button>
+      </div>
+    </div>
+
+    <div id="result-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-button" class="close" onclick="closeResultModal()">&times;</span>
+        <p id="result-message"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
